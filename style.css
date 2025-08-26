@@ -1,0 +1,41 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(221, 180, 164);
+}
+.container{
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 80%;
+    margin: 10%;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px rgba(17, 16, 16, 0.5);
+}
+#unit1,#unit2{
+    border-radius: 5px;
+    padding: 5px;
+}
+#submit{
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid red;
+}
+#value{
+    text-align: center;
+    width: 20%;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+#result{
+    width: 20%;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+}
