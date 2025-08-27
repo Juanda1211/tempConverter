@@ -1,3 +1,5 @@
+PROYECT IDEA FROM from https://roadmap.sh/projects/temperature-converter
+
 # Temperature Converter
 
 A simple web application that converts temperatures between Celsius, Fahrenheit, and Kelvin.
@@ -52,5 +54,5 @@ Feel free to fork this project and submit pull requests for any improvements.
 
 This project is open source.
 
-https://juanda1211.github.io/tempConverter/
-https://roadmap.sh/projects/temperature-converter
+
+
