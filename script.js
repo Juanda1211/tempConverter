@@ -3,15 +3,22 @@ document.addEventListener('DOMContentLoaded',()=>{
     const unit1= document.getElementById("unit1");
     const unit2= document.getElementById("unit2");
     const submitBtn = document.getElementById("submit");
-    const resultInput = document.getElementById("result");
+    const resultOutput = document.getElementById("results");
 
+   function getUnitSymbol(unit){
+    const symbols ={
+        'celsius':'C',
+        'fahrenheit':'F',
+        'kelvin':'K',
+    }; return symbols[unit]|| unit
+   }
 
 submitBtn.addEventListener('click',()=>{
     const value=parseFloat(valueInput.value);
-    if (isNaN(value)){
-        alert('enter valid data');
-        return;
-    }
+    if(isNaN(value)){
+    document.getElementById('results').innerHTML="please enter a valid temp value";
+    return;
+   }
     const fromUnit = unit1.value;
     const toUnit =   unit2.value;
 
@@ -31,8 +38,13 @@ submitBtn.addEventListener('click',()=>{
     }else if(toUnit==='kelvin'){
         result=celsius+273.15;
     }
-    resultInput.value =result.toFixed(2);
-    console.log('Result:', result);
+    const fromSymbol= getUnitSymbol(fromUnit);
+    const toSymbol =getUnitSymbol(toUnit);
+    const resultString= `${value} ${fromSymbol} are ${result.toFixed(2)} ${toSymbol}`;
+    resultOutput.innerHTML = resultString;
+   
+    
+    
 
 
 });
